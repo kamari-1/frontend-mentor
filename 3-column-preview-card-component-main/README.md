@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/kamari-1/frontend-mentor/tree/master/3-column-preview-card-component-main](https://github.com/kamari-1/frontend-mentor/tree/master/3-column-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://kamari-1.github.io/frontend-mentor/3-column-preview-card-component-main/index.html](https://kamari-1.github.io/frontend-mentor/3-column-preview-card-component-main/index.html)
 
 ## My process
 
