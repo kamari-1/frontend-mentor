@@ -1,0 +1,134 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75); /*Transparent white (paragraphs)*/
+  --gray: hsl(0, 0%, 95%); /*Very light gray (background, headings, buttons)*/
+  /* 
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Lexend Deca', sans-serif; 
+  */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gray);
+  max-width: 1440px;
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+main {
+  margin: 5rem auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+/* ---------- TYPROGRAPHY ---------- */
+.icon {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+p,
+button {
+  font-family: "Lexend Deca", sans-serif;
+  /* font-size: 0.9375rem; */
+}
+
+p {
+  color: var(--white);
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  display: block;
+  max-width: 280px;
+}
+
+.wrap {
+  width: 75%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.card1 {
+  background: var(--orange);
+}
+.card2 {
+  background: var(--cyan);
+}
+.card3 {
+  background: var(--dark-cyan);
+}
+
+button {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  padding: 0.8em 1.9em;
+  background: var(--gray);
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 2px solid var(--gray);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: var(--gray);
+}
+
+.card1 button {
+  color: var(--orange);
+}
+.card1 button:hover {
+  background: var(--orange);
+  color: var(--gray);
+}
+.card2 button {
+  color: var(--cyan);
+}
+
+.card2 button:hover {
+  background: var(--cyan);
+  color: var(--gray);
+}
+.card3 button {
+  color: var(--dark-cyan);
+}
+
+.card3 button:hover {
+  background: var(--dark-cyan);
+  color: var(--gray);
+}
+
+/* ********************MEDIA QUERY******************** */
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+}
