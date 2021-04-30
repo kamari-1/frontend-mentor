@@ -1,0 +1,174 @@
+/* 
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 0.94rem;
+}
+
+body {
+  background: hsl(233, 47%, 7%);
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 7rem auto;
+  max-width: 950px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+.head,
+h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+.head {
+  font-size: 2rem;
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Inter";
+  font-size: 1.3rem;
+  margin-bottom: 0.2em;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Inter", serif;
+  font-size: 0.9rem;
+  line-height: 160%;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+  font-size: inherit;
+}
+
+.stat p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* ---------- COMPONENTS ---------- */
+.image::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: hsl(277, 64%, 61%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.image {
+  width: 50%;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  background: hsl(244, 38%, 16%);
+  width: 50%;
+  display: flex;
+}
+
+.wrap {
+  width: 70%;
+  margin: 3rem auto;
+}
+
+.head {
+  margin-top: 6%;
+  margin-bottom: 7%;
+}
+
+.desc-text {
+  margin-bottom: 18%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.stat {
+  margin-right: 10%;
+}
+
+/********************************************
+**************** MEDIA QUERY **************** 
+*********************************************/
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 0.875rem;
+    /* font-size: 0.813rem; */
+  }
+
+  main {
+    flex-direction: column;
+    margin: 4rem auto;
+    max-width: 370px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    margin-bottom: -1%;
+  }
+
+  .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .wrap {
+    width: 85%;
+    margin: 1rem auto;
+  }
+
+  .head {
+    font-size: 1.7rem;
+  }
+
+  .desc-text {
+    font-size: 1rem;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+  .stat {
+    margin-bottom: 10%;
+  }
+}
