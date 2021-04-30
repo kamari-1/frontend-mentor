@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/kamari-1/frontend-mentor/tree/master/stats-preview-card-component-main](https://github.com/kamari-1/frontend-mentor/tree/master/stats-preview-card-component-main)
+- Live Site URL: [https://kamari-1.github.io/frontend-mentor/stats-preview-card-component-main/index.html](https://kamari-1.github.io/frontend-mentor/stats-preview-card-component-main/index.html)
 
 ## My process
 
