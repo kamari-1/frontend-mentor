@@ -1,0 +1,220 @@
+//font-family: 'Commissioner', sans-serif; 400 500 700
+
+:root {
+  --cyan: hsl(176, 50%, 47%);
+  --dark-cyan: hsl(176, 72%, 28%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 48%);
+}
+
+@media screen and (min-width: 570px) {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .btn {
+    background-color: var(--cyan);
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    text-align: center;
+
+    &:hover {
+      background: var(--dark-cyan);
+    }
+  }
+
+  .bookmark {
+    background-color: var(--dark-gray);
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    #bookmark__checkbox__input {
+      display: none;
+    }
+
+    .bookmark__checkbox {
+      display: flex;
+    }
+
+    #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g circle {
+      fill: var(--dark-cyan);
+    }
+
+    #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g path {
+      fill: white;
+    }
+
+    // #bookmark__checkbox__input:checked + .bookmark-text {
+    //   color: var(--dark-cyan);
+    //   content: "Bookmarked";
+
+    //   &::after {
+    //     content: "Bookmarked";
+    //   }
+    // }
+  }
+
+  .text {
+    color: var(--dark-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .stat-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .unavailable {
+    opacity: 0.5;
+
+    .btn {
+      background: var(--dark-gray);
+      cursor: not-allowed;
+    }
+  }
+
+  nav {
+    background-image: url("../images/image-hero-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 350px;
+    padding: 2rem 10%;
+    position: relative;
+
+    .menu,
+    .close-menu {
+      display: none;
+    }
+
+    .nav-ul {
+      list-style: none;
+      color: white;
+      li {
+        display: inline;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  main {
+    width: 95%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    transform: translateY(-3.5rem);
+    border-radius: 8px;
+  }
+
+  .header,
+  .stats,
+  .content {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 8px;
+  }
+
+  //! CARD
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .mastercraft {
+      display: flex;
+      justify-content: center;
+      transform: translateY(-100%);
+    }
+
+    .header-bold {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .header-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+  }
+
+  //! CARD
+  .stats {
+    .stats-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 0.8rem;
+      margin-top: 3rem;
+      background: rgb(233, 233, 233);
+      border-radius: 30px;
+      position: relative;
+
+      .progress {
+        width: (89914 / 100000) * 100%;
+        height: 100%;
+        background: var(--cyan);
+        border-radius: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+  }
+
+  //! CARD
+  .content {
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .text {
+      margin-bottom: 2rem;
+    }
+
+    .content-card {
+      margin-top: 1.7rem;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding: 1rem;
+
+      .section-top {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          color: var(--cyan);
+        }
+      }
+
+      .section-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
