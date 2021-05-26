@@ -11,6 +11,10 @@
   a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .btn {
@@ -100,6 +104,7 @@
     .nav-ul {
       list-style: none;
       color: white;
+      font-weight: 500;
       li {
         display: inline;
         margin: 0 1rem;
@@ -161,6 +166,13 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      #stat__border {
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        padding-left: 2.8rem;
+        padding-right: 2.8rem;
+      }
     }
 
     .progress-bar {
