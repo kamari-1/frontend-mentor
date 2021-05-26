@@ -115,8 +115,8 @@
     margin: 0 auto;
     background: white;
     position: relative;
-    -webkit-transform: translateY(-3.5rem);
-            transform: translateY(-3.5rem);
+    -webkit-transform: translateY(-4.5rem);
+            transform: translateY(-4.5rem);
     border-radius: 8px;
   }
   .header,
