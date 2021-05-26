@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/kamari-1/frontend-mentor/tree/master/crowdfunding-product-page-main)
-- Live Site URL: [Add live site URL here](https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html)
+- Solution URL: [https://github.com/kamari-1/frontend-mentor/tree/master/crowdfunding-product-page-main](https://github.com/kamari-1/frontend-mentor/tree/master/crowdfunding-product-page-main)
+- Live Site URL: [https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html](https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html)
 
 ## My process
 
