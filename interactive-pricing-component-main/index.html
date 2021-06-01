@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Interactive pricing component</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="wrap">
+        <h2>Simple, traffic-based pricing</h2>
+        <p class="text-center">Sign-up for our 30-day trial.</p>
+        <p class="text-center">No credit card required.</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="card__top">
+        <div class="stats">
+          <h4><span id="views"></span> Pageviews</h4>
+          <p class="price">
+            <span id="dollar_sign">$</span>
+            <span id="price__amt"></span> /month
+          </p>
+        </div>
+        <div class="range">
+          <input type="range" id="slider" min="1" max="5" value="1" step="1" />
+        </div>
+
+        <!--  -->
+        <div class="billing">
+          <div>Monthly Billing</div>
+          <label for="billing__checkbox">
+            <input type="checkbox" id="billing__checkbox" />
+            <div class="toggle"></div>
+          </label>
+          <div>Yearly Billing</div>
+          <div class="discount__percent">
+            -25% <span id="discount">discount</span>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!-- <hr /> -->
+      <div class="card__bottom">
+        <div class="features__list">
+          <p>
+            <i class="tick"><img src="./images/icon-check.svg" alt="tick" /></i>
+            Unlimited websites
+          </p>
+          <p>
+            <i class="tick"><img src="./images/icon-check.svg" alt="tick" /></i
+            >100% data ownership
+          </p>
+          <p>
+            <i class="tick"><img src="./images/icon-check.svg" alt="tick" /></i
+            >Email reports
+          </p>
+        </div>
+        <!--  -->
+        <div class="btn">Start my trial</div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://kamari-1.github.io/" target="_blank">Clement Oboh</a>.
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
