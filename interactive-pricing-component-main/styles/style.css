@@ -348,12 +348,13 @@
             flex-direction: column;
   }
   header h2 {
+    font-size: 1.7rem;
     color: #293356;
     margin-bottom: 0.4rem;
   }
   header p {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   main {
     display: -webkit-box;
