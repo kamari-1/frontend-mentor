@@ -55,7 +55,8 @@
     display: block !important;
     background: var(--Text-secondary);
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
   }
   header .dark_mode {
     display: -webkit-box !important;
@@ -131,10 +132,11 @@ html.transition *:after {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(35vh, var(--Top-BG-Pattern)), color-stop(35vh, var(--BG)));
-  background: linear-gradient(var(--Top-BG-Pattern) 35vh, var(--BG) 35vh);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--Top-BG-Pattern)), color-stop(35vh, var(--BG)));
+  background: linear-gradient(var(--Top-BG-Pattern) 0 35vh, var(--BG) 35vh 100%);
   font-size: 14px;
   padding: 0 2rem;
+  min-height: 100vh;
 }
 
 main {
@@ -150,12 +152,13 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 930px;
+  max-width: 1010px;
 }
 
 h1,
 h2 {
   font-weight: 700;
+  line-height: 1.4;
 }
 
 h1 {
@@ -165,6 +168,16 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text-green,
@@ -218,6 +231,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 header hr {
@@ -274,8 +289,8 @@ header hr {
 .overview {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 220px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+  -ms-grid-columns: (minmax(150px, 240px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 240px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -303,7 +318,6 @@ header hr {
           align-items: center;
   background: var(--Card-BG);
   padding: 1.5rem 0;
-  padding-bottom: 1rem;
   border-radius: 5px;
 }
 
@@ -312,13 +326,14 @@ header hr {
 }
 
 .followers .followers_card .followers_count {
-  margin-bottom: -0.7rem;
+  padding-top: 1rem;
 }
 
 .followers .followers_card .followers_type {
   font-size: 0.8rem;
   letter-spacing: 3.5px;
   text-transform: uppercase;
+  padding-bottom: 1.5rem;
 }
 
 .followers .followers_card_1,
@@ -388,9 +403,13 @@ header hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .overview .overview_card .overview_stats {
+  padding-top: 1.2rem;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;

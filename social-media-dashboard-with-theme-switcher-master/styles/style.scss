@@ -40,9 +40,13 @@ html.transition *:after {
 
 body {
   // background: var(--BG);
-  background: linear-gradient(var(--Top-BG-Pattern) 35vh, var(--BG) 35vh);
+  background: linear-gradient(
+    var(--Top-BG-Pattern) 0 35vh,
+    var(--BG) 35vh 100%
+  );
   font-size: 14px;
   padding: 0 2rem;
+  min-height: 100vh;
 }
 
 main {
@@ -52,13 +56,14 @@ main {
   flex-direction: column;
   justify-content: center;
   // width: 90%;
-  max-width: 930px;
+  max-width: 1010px;
 }
 
 // ----- TYPOGRAPHY -----
 h1,
 h2 {
   font-weight: 700;
+  line-height: 1.4;
 }
 
 h1 {
@@ -68,6 +73,12 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  display: flex;
+  align-items: center;
 }
 
 .text-green,
@@ -116,6 +127,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
 
   hr {
     display: none;
@@ -167,7 +180,7 @@ header {
 .followers,
 .overview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 240px));
   justify-content: center;
   gap: 1rem;
 }
@@ -183,7 +196,7 @@ header {
     align-items: center;
     background: var(--Card-BG);
     padding: 1.5rem 0;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     border-radius: 5px;
 
     .username i {
@@ -191,13 +204,15 @@ header {
     }
 
     .followers_count {
-      margin-bottom: -0.7rem;
+      // margin-bottom: -0.7rem;
+      padding-top: 1rem;
     }
 
     .followers_type {
       font-size: 0.8rem;
       letter-spacing: 3.5px;
       text-transform: uppercase;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -253,9 +268,11 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     .overview_stats {
+      padding-top: 1.2rem;
       align-items: baseline;
     }
   }
