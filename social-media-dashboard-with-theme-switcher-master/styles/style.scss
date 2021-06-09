@@ -140,13 +140,14 @@ header {
   display: flex;
 
   .toggle_div {
+    display: flex;
     margin-left: 0.8rem;
 
     .toggle {
       width: 40px;
       height: 20px;
       border-radius: 17px;
-      background: var(--Toggle);
+      background-color: var(--Toggle);
       position: relative;
       cursor: pointer;
 
@@ -284,10 +285,12 @@ header {
   text-align: center;
   font-family: "Inter", sans-serif;
   color: var(--Text-secondary);
+  padding-bottom: 1rem;
 }
 
 .attribution a {
   text-decoration: none;
+  font-weight: 700;
   font-size: inherit;
   color: #ff0a1b;
 }
