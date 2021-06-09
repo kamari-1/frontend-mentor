@@ -1,0 +1,62 @@
+// -----------------------
+// ----- Tablet view -----
+// -----------------------
+
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 12px !important;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start !important;
+
+    hr {
+      display: block !important;
+      background: var(--Text-secondary);
+      width: 100%;
+      margin-top: 0px;
+    }
+
+    .dark_mode {
+      display: flex !important;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  // ----- TYPOGRAPHY -----
+
+  h1 {
+    font-size: 1.3rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .text-green,
+  .text-red,
+  .username {
+    font-size: 0.5rem;
+  }
+
+  .followers_count {
+    font-size: 2.5rem;
+  }
+
+  .text-green,
+  .text-red {
+    font-size: 0.4rem;
+  }
+}
+
+// -----------------------
+// ----- Mobile view -----
+// -----------------------
+
+@media screen and (max-width: 400px) {
+  .followers,
+  .overview {
+    grid-template-columns: 1fr !important;
+  }
+}

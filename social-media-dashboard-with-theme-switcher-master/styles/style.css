@@ -1,0 +1,411 @@
+/*
+## Colors
+
+### Primary
+
+- Lime Green: hsl(163, 72%, 41%)
+- Bright Red: hsl(356, 69%, 56%)
+
+- Facebook: hsl(208, 92%, 53%)
+- Twitter: hsl(203, 89%, 53%)
+- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+- YouTube: hsl(348, 97%, 39%)
+
+#### Dark Theme
+
+- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+
+#### Light Theme
+
+- Toggle: hsl(230, 22%, 74%)
+
+### Neutral
+
+#### Dark Theme
+
+- Very Dark Blue (BG): hsl(230, 17%, 14%)
+- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
+- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
+- Desaturated Blue (Text): hsl(228, 34%, 66%)
+- White (Text): hsl(0, 0%, 100%)
+
+#### Light Theme
+
+- White (BG): hsl(0, 0%, 100%)
+- Very Pale Blue (Top BG Pattern): hsl(225, 100%, 98%)
+- Light Grayish Blue (Card BG): hsl(227, 47%, 96%)
+- Dark Grayish Blue (Text): hsl(228, 12%, 44%)
+- Very Dark Blue (Text): hsl(230, 17%, 14%)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 12px !important;
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  header hr {
+    display: block !important;
+    background: var(--Text-secondary);
+    width: 100%;
+    margin-top: 0px;
+  }
+  header .dark_mode {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  h1 {
+    font-size: 1.3rem !important;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  .text-green,
+  .text-red,
+  .username {
+    font-size: 0.5rem;
+  }
+  .followers_count {
+    font-size: 2.5rem;
+  }
+  .text-green,
+  .text-red {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .followers,
+  .overview {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  --BG: hsl(230, 17%, 14%);
+  --Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Card-BG: hsl(228, 28%, 20%);
+  --Text-secondary: hsl(228, 34%, 66%);
+  --Text-primary: white;
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+html[data-theme="light"] {
+  --BG: hsl(0, 0%, 100%);
+  --Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Card-BG: hsl(227, 47%, 96%);
+  --Text-secondary: hsl(228, 12%, 44%);
+  --Text-primary: hsl(230, 17%, 14%);
+  --Toggle: hsl(230, 22%, 74%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(35vh, var(--Top-BG-Pattern)), color-stop(35vh, var(--BG)));
+  background: linear-gradient(var(--Top-BG-Pattern) 35vh, var(--BG) 35vh);
+  font-size: 14px;
+  padding: 0 2rem;
+}
+
+main {
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 930px;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.text-green,
+.text-red,
+.username {
+  font-size: 0.8rem;
+}
+
+.followers_count {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.followers_type {
+  font-weight: 400;
+}
+
+.text-primary {
+  color: var(--Text-primary) !important;
+}
+
+.text-secondary {
+  color: var(--Text-secondary);
+}
+
+.text-secondary:not(.followers_type) {
+  font-weight: 700;
+}
+
+.text-green,
+.text-red {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.text-green {
+  color: #1db489;
+}
+
+.text-red {
+  color: #dc414c;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header hr {
+  display: none;
+}
+
+.dark_mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dark_mode .toggle_div {
+  margin-left: 0.8rem;
+}
+
+.dark_mode .toggle_div .toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 17px;
+  background: var(--Toggle);
+  position: relative;
+  cursor: pointer;
+}
+
+.dark_mode .toggle_div .toggle::after {
+  content: "";
+  position: absolute;
+  background: var(--BG);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  top: 0;
+  left: 3px;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.dark_mode .toggle_div #toggle_theme {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.dark_mode .toggle_div #toggle_theme:checked + .toggle::after {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.followers,
+.overview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 220px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 220px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.followers {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.followers .followers_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--Card-BG);
+  padding: 1.5rem 0;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.followers .followers_card .username i {
+  margin: auto 0.4rem;
+}
+
+.followers .followers_card .followers_count {
+  margin-bottom: -0.7rem;
+}
+
+.followers .followers_card .followers_type {
+  font-size: 0.8rem;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.followers .followers_card_1,
+.followers .followers_card_2,
+.followers .followers_card_3,
+.followers .followers_card_4 {
+  position: relative;
+}
+
+.followers .followers_card_1::before,
+.followers .followers_card_2::before,
+.followers .followers_card_3::before,
+.followers .followers_card_4::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 0px;
+  border-radius: 100px 100px 0px 0px;
+  left: 0;
+}
+
+.followers .followers_card_1::before {
+  background: #198ff5;
+}
+
+.followers .followers_card_2::before {
+  background: #1ca0f2;
+}
+
+.followers .followers_card_3::before {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.followers .followers_card_4::before {
+  background: #c4032a;
+}
+
+.overview {
+  margin-bottom: 2rem;
+}
+
+.overview .overview_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--Card-BG);
+  padding: 1.5rem;
+  padding-bottom: 0;
+  border-radius: 7px;
+}
+
+.overview .overview_card .overview_top,
+.overview .overview_card .overview_stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overview .overview_card .overview_stats {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: var(--Text-secondary);
+}
+
+.attribution a {
+  text-decoration: none;
+  font-size: inherit;
+  color: #ff0a1b;
+}
+/*# sourceMappingURL=style.css.map */
