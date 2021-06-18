@@ -29,10 +29,22 @@
   }
 
   .bookmark {
-    background-color: var(--dark-gray);
+    // background-color: var(--dark-gray);
+
+    #bookmark__checkbox__input {
+      display: none;
+    }
 
     #bookmark-text {
       display: none;
+    }
+
+    #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g circle {
+      fill: var(--dark-cyan);
+    }
+
+    #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g path {
+      fill: white;
     }
   }
 

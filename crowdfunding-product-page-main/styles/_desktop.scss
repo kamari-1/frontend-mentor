@@ -33,10 +33,14 @@
   }
 
   .bookmark {
-    background-color: var(--dark-gray);
+    background-color: rgb(233, 233, 233);
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+    border-radius: 30px;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
 
     #bookmark__checkbox__input {
       display: none;
@@ -44,6 +48,24 @@
 
     .bookmark__checkbox {
       display: flex;
+      position: absolute;
+      left: 0;
+    }
+
+    #bookmark-text {
+      margin-left: 2.5rem;
+      color: var(--dark-gray);
+
+      #ed {
+        display: none;
+      }
+    }
+
+    #bookmark__checkbox__input:checked ~ #bookmark-text {
+      color: var(--dark-cyan);
+      #ed {
+        display: inline;
+      }
     }
 
     #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g circle {

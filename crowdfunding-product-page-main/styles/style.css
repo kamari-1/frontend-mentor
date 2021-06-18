@@ -28,7 +28,10 @@
     background: var(--dark-cyan);
   }
   .bookmark {
-    background-color: var(--dark-gray);
+    background-color: #e9e9e9;
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+    border-radius: 30px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -36,6 +39,7 @@
         -ms-flex-align: center;
             align-items: center;
     cursor: pointer;
+    position: relative;
   }
   .bookmark #bookmark__checkbox__input {
     display: none;
@@ -44,6 +48,21 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: absolute;
+    left: 0;
+  }
+  .bookmark #bookmark-text {
+    margin-left: 2.5rem;
+    color: var(--dark-gray);
+  }
+  .bookmark #bookmark-text #ed {
+    display: none;
+  }
+  .bookmark #bookmark__checkbox__input:checked ~ #bookmark-text {
+    color: var(--dark-cyan);
+  }
+  .bookmark #bookmark__checkbox__input:checked ~ #bookmark-text #ed {
+    display: inline;
   }
   .bookmark #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g circle {
     fill: var(--dark-cyan);
@@ -268,11 +287,17 @@
   .btn:hover {
     background: var(--dark-cyan);
   }
-  .bookmark {
-    background-color: var(--dark-gray);
+  .bookmark #bookmark__checkbox__input {
+    display: none;
   }
   .bookmark #bookmark-text {
     display: none;
+  }
+  .bookmark #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g circle {
+    fill: var(--dark-cyan);
+  }
+  .bookmark #bookmark__checkbox__input:checked + .bookmark__checkbox #mark g path {
+    fill: white;
   }
   .text {
     color: var(--dark-gray);
