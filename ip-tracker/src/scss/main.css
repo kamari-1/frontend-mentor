@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  width: 100vw;
+}
+
+*,
+*::before,
+*::after,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.App {
+  position: relative;
+}
+
+.scroll-to-top {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #2b2b2b;
+  color: white;
+  opacity: 0.8;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  cursor: pointer;
+  z-index: 10000000;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+.header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  background-image: url("../images/pattern-bg.png");
+}
+
+.header_container .header-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.header_container .input_section {
+  margin: 0 auto;
+  margin-bottom: -7rem;
+  width: 100%;
+}
+
+.header_container .input_section .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  height: 2.8rem;
+  width: 80%;
+  max-width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.header_container .input_section .search-form .search-input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #969696;
+  outline: none;
+  border: none;
+}
+
+.header_container .input_section .search-form .search-btn {
+  height: 100%;
+  background: #2b2b2b;
+  color: white;
+  width: 12%;
+  outline: none;
+  border: none;
+}
+
+.header_container .ipDetails_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  width: auto;
+  max-width: 80%;
+  z-index: 1000;
+}
+
+.header_container .ipDetails_wrap .ipDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.header_container .ipDetails_wrap .ipDetails .ipDetail {
+  padding-bottom: 1rem;
+}
+
+.header_container .ipDetails_wrap .ipDetails .ipDetail-title {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #969696;
+  letter-spacing: 1px;
+}
+
+.header_container .ipDetails_wrap .ipDetails .ipDetail-info {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+@media screen and (min-width: 700px) {
+  .header_container .input_section {
+    margin-bottom: -3rem;
+  }
+  .header_container .input_section .search-form {
+    max-width: 400px;
+  }
+  .header_container .ipDetails_wrap {
+    width: 90%;
+    max-width: 960px;
+  }
+  .header_container .ipDetails_wrap .ipDetails {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.5rem;
+    text-align: left;
+  }
+  .header_container .ipDetails_wrap .ipDetails .ipDetail {
+    padding-bottom: 0;
+    padding-right: 1rem;
+  }
+  .header_container .ipDetails_wrap .ipDetails .ipDetail-title {
+    padding-bottom: 0.5rem;
+  }
+  .header_container .ipDetails_wrap .ipDetails .ipDetail + .ipDetail {
+    padding-left: 1.2rem;
+    border-left: 1px solid #dadada;
+  }
+}
+/*# sourceMappingURL=main.css.map */

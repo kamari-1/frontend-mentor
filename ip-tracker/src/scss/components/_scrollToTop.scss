@@ -1,0 +1,25 @@
+.App {
+  position: relative;
+}
+.scroll-to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: $very-dark-gray;
+  color: white;
+  opacity: 0.8;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  cursor: pointer;
+  z-index: 10000000;
+  transition: 0.2s all;
+
+  &:hover {
+    opacity: 1;
+  }
+}
